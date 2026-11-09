@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jacxenie, Creator and Operator</title>
+<meta name="description" content="Jacxenie makes content people actually watch. 4.3 million plays on her top TikTok, viral reels for Judy Zhou, and four years running the work at Anomalous.">
+<meta name="theme-color" content="#4a1030">
+<meta property="og:title" content="Jacxenie, Creator and Operator">
+<meta property="og:description" content="The work speaks first. Viral videos, client reels, and four years behind the camera at Anomalous.">
+<meta property="og:image" content="images/hero-DSC09406.jpg">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%234a1030'/%3E%3Ctext x='32' y='44' font-family='Georgia,serif' font-size='36' font-weight='700' fill='%23ffffff' text-anchor='middle'%3EJ%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ivory:#faf5ef; --ink:#221a20; --plum:#4a1030; --magenta:#c2275c;
+  --rose:#f6e3ea; --lilac:#e7d6f5; --peach:#ffe3c8; --mint:#d8f0e4;
+  --line:#e8dcd4; --muted:#6f5f68;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--ivory);color:var(--ink);font-family:Inter,system-ui,sans-serif;line-height:1.6;-webkit-text-size-adjust:100%}
+img{display:block;max-width:100%}
+a{color:inherit}
+.wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+.eyebrow{font-size:12px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--magenta)}
+.eyebrow .spark{color:var(--magenta);font-size:14px}
+h1,h2,.serif{font-family:Fraunces,Georgia,serif;font-weight:600;line-height:1.05;letter-spacing:-.01em}
+h2{font-size:clamp(34px,5vw,56px);margin:14px 0 12px}
+.lede{font-size:clamp(16px,2.2vw,19px);color:var(--muted);max-width:56ch}
+.hand{font-family:Caveat,cursive;font-size:clamp(24px,3vw,30px);color:var(--magenta);font-weight:700}
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}
+.reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+/* top bar */
+.top{position:sticky;top:0;z-index:20;background:rgba(250,245,239,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+.wordmark{font-family:Fraunces,Georgia,serif;font-weight:700;font-size:22px;letter-spacing:.14em;text-decoration:none}
+.wordmark span{color:var(--magenta)}
+.nav{display:flex;gap:26px;font-size:14px;font-weight:600}
+.nav a{text-decoration:none;opacity:.75;padding:4px 0;border-bottom:2px solid transparent}
+.nav a:hover{opacity:1;color:var(--magenta)}
+.nav a.active{opacity:1;color:var(--magenta);border-bottom-color:var(--magenta)}
+.nav-toggle{display:none;background:none;border:1px solid var(--line);border-radius:10px;font-size:20px;line-height:1;padding:8px 12px;cursor:pointer;color:var(--plum)}
+.btn{display:inline-block;background:var(--plum);color:#fff;text-decoration:none;font-weight:700;font-size:14px;padding:12px 22px;border-radius:999px;box-shadow:3px 3px 0 var(--magenta)}
+.btn:hover{background:var(--magenta);box-shadow:3px 3px 0 var(--plum)}
+.btn.ghost{background:transparent;color:var(--plum);border:2px solid var(--plum);box-shadow:3px 3px 0 var(--lilac)}
+/* hero */
+.hero{padding:72px 0 56px}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center}
+.hero h1{font-size:clamp(46px,7.2vw,88px);margin:16px 0 20px}
+.hero h1 em{font-style:italic;color:var(--magenta)}
+.hero-frame{position:relative}
+.hero-frame::before{content:"";position:absolute;inset:-14px 14px 14px -14px;background:var(--peach);border-radius:28px;transform:rotate(2deg);z-index:0}
+.hero-frame::after{content:"";position:absolute;inset:14px -14px -14px 14px;background:var(--lilac);border-radius:28px;transform:rotate(-2deg);z-index:0}
+.hero-photo{position:relative;z-index:1;border-radius:28px;overflow:hidden;box-shadow:0 24px 60px rgba(74,16,48,.22);background:var(--rose)}
+.hero-photo img{width:100%;height:640px;object-fit:cover;object-position:center 30%}
+.hero-cta{display:flex;gap:12px;margin-top:28px;flex-wrap:wrap}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:64px;border-top:1px solid var(--line);padding-top:28px}
+.stat b{font-family:Fraunces,Georgia,serif;font-size:clamp(30px,3.6vw,44px);display:block;line-height:1;color:var(--plum)}
+.stat b span{font-size:inherit}
+.stat .lbl{font-size:13px;color:var(--muted);font-weight:600}
+.fine{font-size:12px;color:var(--muted);margin-top:14px}
+/* wavy divider */
+.wave{display:block;width:100%;height:34px;margin:-1px 0}
+/* sections */
+section{padding:72px 0;scroll-margin-top:90px}
+section.tint{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+section.lilac{background:var(--lilac);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.sec-head{display:flex;justify-content:space-between;align-items:end;gap:24px;margin-bottom:36px;flex-wrap:wrap}
+/* work cards */
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.card{background:#fff;border:2px solid var(--line);border-radius:24px;overflow:hidden;display:flex;flex-direction:column;transition:transform .2s ease, box-shadow .2s ease}
+.card:hover{transform:translateY(-4px) rotate(-.4deg);box-shadow:0 18px 40px rgba(74,16,48,.16)}
+.card .thumb{position:relative;height:220px;overflow:hidden;cursor:pointer;background:var(--rose)}
+.card .thumb img{width:100%;height:100%;object-fit:cover;object-position:center 20%}
+.card .thumb .play{position:absolute;inset:0;display:flex;align-items:center;justify-content:center}
+.card .thumb .play i{width:58px;height:58px;border-radius:50%;background:rgba(194,39,92,.92);color:#fff;display:flex;align-items:center;justify-content:center;font-size:20px;font-style:normal;box-shadow:0 6px 20px rgba(0,0,0,.3);transition:transform .2s ease}
+.card .thumb:hover .play i{transform:scale(1.12)}
+.card .body{padding:20px 20px 22px;display:flex;flex-direction:column;gap:8px;flex:1}
+.chiprow{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.chip{font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;background:var(--rose);color:var(--plum);padding:4px 10px;border-radius:999px;border:1.5px solid var(--plum)}
+.chip.client{background:var(--lilac);color:#5b2a86;border-color:#5b2a86}
+.chip.tilt-a{transform:rotate(-2deg)}
+.chip.tilt-b{transform:rotate(1.5deg)}
+.card h3{font-family:Fraunces,Georgia,serif;font-size:21px;line-height:1.2}
+.card p{font-size:14px;color:var(--muted);flex:1}
+.card .num{font-size:14px;font-weight:700;color:var(--plum)}
+.card .num small{font-weight:600;color:var(--muted)}
+.watch{font-weight:700;font-size:14px;color:var(--magenta);text-decoration:none}
+.watch:hover{text-decoration:underline}
+/* bio */
+.bio-card{background:#fff;border:2px solid var(--plum);border-radius:28px;padding:40px;box-shadow:6px 6px 0 var(--peach);max-width:1080px;margin:0 auto;display:flex;gap:36px;align-items:center}
+.bio-card p{font-size:clamp(16px,2vw,18px);color:#3a2f36;margin-bottom:16px}
+.bio-card p:last-child{margin-bottom:0}
+.bio-text{flex:1;min-width:0}
+.bio-photo{flex:0 0 420px;width:420px;height:520px;object-fit:cover;object-position:center 25%;border-radius:20px;border:2px solid var(--plum);box-shadow:5px 5px 0 var(--peach)}
+/* client work */
+.client-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.client-card{border:2px solid var(--line);border-radius:24px;padding:28px;background:#fff;transition:transform .2s ease}
+.client-card:hover{transform:translateY(-4px) rotate(.4deg)}
+.client-card h3{font-family:Fraunces,Georgia,serif;font-size:26px;margin:10px 0 8px}
+.client-card p{color:var(--muted);font-size:15px}
+.client-card .num{font-size:14px;font-weight:700;color:var(--plum);margin-top:12px}
+/* contact */
+.contact-card{background:var(--plum);color:#fff;border-radius:28px;padding:44px 36px;text-align:center;box-shadow:6px 6px 0 var(--magenta)}
+.contact-card h2{color:#fff}
+.contact-card p{color:#e8cdd8;max-width:52ch;margin:0 auto}
+.contact-card .mail{display:inline-block;margin-top:24px;background:#fff;color:var(--plum);font-weight:700;text-decoration:none;padding:14px 28px;border-radius:999px;font-size:16px;box-shadow:3px 3px 0 var(--peach)}
+.contact-card .mail:hover{background:var(--peach)}
+.socials{display:flex;gap:12px;margin-top:28px;flex-wrap:wrap;justify-content:center}
+.socials a{color:#fff;text-decoration:none;font-weight:700;border:1.5px solid rgba(255,255,255,.5);padding:10px 18px;border-radius:999px;font-size:14px}
+.socials a:hover{background:var(--magenta);border-color:var(--magenta)}
+/* video modal */
+.vmodal{position:fixed;inset:0;z-index:50;background:rgba(20,8,16,.92);display:flex;align-items:center;justify-content:center;padding:24px}
+.vmodal[hidden]{display:none}
+.vmodal .vbox{width:100%;max-width:900px}
+.vmodal .vbox.portrait{max-width:420px}
+.vmodal .vframe{position:relative;width:100%;aspect-ratio:16/9;border-radius:16px;overflow:hidden;background:#000;box-shadow:0 30px 80px rgba(0,0,0,.5)}
+.vmodal .vbox.portrait .vframe{aspect-ratio:9/16;max-height:82vh}
+.vmodal iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.vmodal .vclose{display:block;margin:16px auto 0;background:rgba(255,255,255,.14);color:#fff;border:1px solid rgba(255,255,255,.35);border-radius:999px;cursor:pointer;font-size:15px;font-weight:700;padding:10px 22px}
+.vmodal .vclose:hover{background:var(--magenta);border-color:var(--magenta)}
+/* footer */
+footer{background:var(--plum);color:#fff;padding:26px 0}
+footer h2{color:#fff}
+footer p{color:#e8cdd8;max-width:52ch}
+footer .socials{justify-content:flex-start}
+.foot-fine{font-size:12px;color:#d9b8c6}
+@media (max-width:900px){
+  .hero-grid{grid-template-columns:1fr;gap:32px}
+  .hero-photo img{height:480px}
+  .cards{grid-template-columns:1fr 1fr}
+  .client-grid{grid-template-columns:1fr}
+  .bio-card{padding:28px;flex-direction:column;gap:24px;align-items:stretch}
+  .bio-photo{flex:none;width:100%;height:420px}
+}
+@media (max-width:600px){
+  .nav-toggle{display:block}
+  .nav{position:absolute;top:64px;left:0;right:0;background:var(--ivory);flex-direction:column;gap:0;padding:8px 24px 16px;border-bottom:1px solid var(--line);display:none}
+  .nav.open{display:flex}
+  .nav a{padding:12px 0;border-bottom:1px solid var(--line);font-size:16px}
+  .top .btn{display:none}
+  .hero{padding:48px 0 40px}
+  .hero-photo img{height:420px}
+  .stats{grid-template-columns:1fr 1fr;gap:24px 16px}
+  .cards{grid-template-columns:1fr}
+  section{padding:52px 0}
+  .contact-card{padding:32px 22px}
+}
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <a class="wordmark" href="#">JACXENIE<span>.</span></a>
+    <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">&#9776;</button>
+    <nav class="nav" id="nav">
+      <a href="#bio">Bio</a>
+      <a href="#work">Viral work</a>
+      <a href="#clients">Client work</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a class="btn" href="https://www.tiktok.com/@jacxenie" target="_blank" rel="noopener">Follow @jacxenie</a>
+  </div>
+</header>
+
+<div class="wrap hero">
+  <div class="hero-grid">
+    <div class="reveal">
+      <p class="eyebrow"><span class="spark">&#10022;</span> Creator and operator, New York</p>
+      <h1>The work<br>speaks <em>first.</em></h1>
+      <p class="lede">Jacxenie makes content people actually watch, and runs the machine behind it. Four years at Anomalous doing the filming, the editing, the posting, the copy, and the client strategy, and a personal feed with millions of plays to prove it.</p>
+      <p class="hand" style="margin-top:16px">made with love and a lot of screen time &#10022;</p>
+      <div class="hero-cta">
+        <a class="btn" href="#work">See the viral work</a>
+        <a class="btn ghost" href="#contact">Say hello</a>
+      </div>
+    </div>
+    <div class="hero-frame reveal">
+      <div class="hero-photo">
+        <img src="images/hero-DSC09406.jpg" alt="Jacxenie smiling in front of a flower mural" width="2000" height="3000">
+      </div>
+    </div>
+  </div>
+  <div class="stats reveal">
+    <div class="stat"><b><span data-count="4.3" data-decimals="1">0</span>M</b><span class="lbl">plays, top TikTok</span></div>
+    <div class="stat"><b><span data-count="783">0</span>K</b><span class="lbl">likes, top TikTok</span></div>
+    <div class="stat"><b><span data-count="7">0</span></b><span class="lbl">viral pieces on this page</span></div>
+    <div class="stat"><b><span data-count="4">0</span> yrs</b><span class="lbl">operating at Anomalous</span></div>
+  </div>
+  <p class="fine">Play and like counts checked November 6, 2026.</p>
+</div>
+
+<section class="lilac" id="bio">
+  <div class="wrap">
+    <div class="reveal">
+      <p class="eyebrow"><span class="spark">&#10022;</span> Bio</p>
+      <h2>Hi, I'm Jacxenie.</h2>
+    </div>
+    <div class="bio-card reveal">
+      <img class="bio-photo" src="images/bio-IMG_6684.jpg" alt="Jacxenie standing by a river in a red top and white pants" width="1400" height="1867">
+      <div class="bio-text">
+      <p>Jacxenie has spent the last 4 years working alongside a group of amazing creators and clients. She shifted from her early beginnings as a day care teacher, to creative director at Anomalous, leading production and strategy. In addition to her work at Anomalous, Jacxenie has also taken on management of the social media accounts of Judy Zhou, a successful real estate agent with Douglas Elliman in New York City.</p>
+      <p>Outside of work, Jacxenie is passionate about creating content for her own personal accounts, and loves to share her hobbies and activities with her followers. On weekends, you'll find Jacxenie working on a loaf of sourdough bread, hiking upstate NY with her dog &amp; fianc&eacute;, playing Catan with her friends, watching old home movies with her family, or cuddling with her two cats!</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<svg class="wave" viewBox="0 0 1440 34" preserveAspectRatio="none" aria-hidden="true"><path d="M0,18 C240,34 480,2 720,18 C960,34 1200,2 1440,18 L1440,34 L0,34 Z" fill="#e7d6f5"/></svg>
+
+<section class="tint" id="work">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div>
+        <p class="eyebrow"><span class="spark">&#10022;</span> Viral links to content I have made</p>
+        <h2>Videos that traveled.</h2>
+        <p class="lede">Tap any video to watch it right here. Every card also links out to the original post.</p>
+      </div>
+    </div>
+    <div class="cards">
+      <article class="card reveal">
+        <div class="thumb" data-video="tiktok" data-id="7263490906630671659"><img src="images/thumbs/tt-dog.jpg" alt="Jacxenie with a few sweet dogs" loading="lazy" width="1080" height="1920"><span class="play"><i>&#9654;</i></span></div>
+        <div class="body">
+          <div class="chiprow"><span class="chip tilt-a">TikTok</span><span class="chip tilt-b">Her feed</span></div>
+          <h3>The dog video</h3>
+          <p>A chance meeting with a few sweet dogs, and the inner child came out. Her biggest video by far.</p>
+          <p class="num">4.3M plays <small>&middot; 783K likes &middot; 35K saves</small></p>
+          <a class="watch" href="https://www.tiktok.com/t/ZPLCTeSEP/" target="_blank" rel="noopener">Watch on TikTok &rarr;</a>
+        </div>
+      </article>
+      <article class="card reveal">
+        <div class="thumb" data-video="youtube" data-id="ZbLnZYIJ3Ds"><img src="images/thumbs/yt-hair.jpg" alt="Jacxenie showing her curly hair routine" loading="lazy" width="1280" height="720"><span class="play"><i>&#9654;</i></span></div>
+        <div class="body">
+          <div class="chiprow"><span class="chip tilt-b">YouTube</span><span class="chip tilt-a">Her feed</span></div>
+          <h3>Shea Moisture curly hair routine</h3>
+          <p>Her natural curl journey, and learning to love the hair she was born with, heat damage and all.</p>
+          <p class="num">Long form <small>&middot; hair care</small></p>
+          <a class="watch" href="https://youtu.be/ZbLnZYIJ3Ds" target="_blank" rel="noopener">Watch on YouTube &rarr;</a>
+        </div>
+      </article>
+      <article class="card reveal">
+        <div class="thumb" data-video="tiktok" data-id="7138144123751550251"><img src="images/thumbs/tt-chicken.jpg" alt="Sweet soy sauce chicken in a pan" loading="lazy" width="1080" height="1920"><span class="play"><i>&#9654;</i></span></div>
+        <div class="body">
+          <div class="chiprow"><span class="chip tilt-a">TikTok</span><span class="chip tilt-b">Her feed</span></div>
+          <h3>Sweet soy sauce chicken</h3>
+          <p>A 16 second cook at home recipe, seared chicken thighs finished in a sweet soy glaze.</p>
+          <p class="num">136K plays <small>&middot; 1K saves</small></p>
+          <a class="watch" href="https://www.tiktok.com/t/ZPLCTq4LH/" target="_blank" rel="noopener">Watch on TikTok &rarr;</a>
+        </div>
+      </article>
+      <article class="card reveal">
+        <div class="thumb" data-video="instagram" data-id="Chsh-lHBxCP"><img src="images/thumbs/ig-Chsh-lHBxCP.jpg" alt="Jacxenie talking about how long her hair takes" loading="lazy" width="720" height="1280"><span class="play"><i>&#9654;</i></span></div>
+        <div class="body">
+          <div class="chiprow"><span class="chip tilt-b">Instagram</span><span class="chip tilt-a">Her feed</span></div>
+          <h3>How long does my hair take?</h3>
+          <p>Thirty to forty five minutes on a simple day, up to an hour on a complicated look. Curly hair is not easy.</p>
+          <p class="num">650 likes <small>&middot; Aug 2022</small></p>
+          <a class="watch" href="https://www.instagram.com/p/Chsh-lHBxCP/" target="_blank" rel="noopener">Watch on Instagram &rarr;</a>
+        </div>
+      </article>
+      <article class="card reveal">
+        <div class="thumb" data-video="instagram" data-id="DaihDK7vHwY"><img src="images/thumbs/ig-DaihDK7vHwY.jpg" alt="Judy Zhou telling a Webster Hall coat check story" loading="lazy" width="1080" height="1920"><span class="play"><i>&#9654;</i></span></div>
+        <div class="body">
+          <div class="chiprow"><span class="chip tilt-a">Instagram</span><span class="chip client tilt-b">Judy Zhou</span></div>
+          <h3>The Webster Hall coat check trick</h3>
+          <p>An NYU Third North memory, how to dodge the coat check line and still make the night. Made for Judy Zhou.</p>
+          <p class="num">1,259 likes <small>&middot; Jul 2026</small></p>
+          <a class="watch" href="https://www.instagram.com/reel/DaihDK7vHwY/" target="_blank" rel="noopener">Watch on Instagram &rarr;</a>
+        </div>
+      </article>
+      <article class="card reveal">
+        <div class="thumb" data-video="instagram" data-id="C6cuZ5euWhK"><img src="images/thumbs/ig-C6cuZ5euWhK.jpg" alt="Judy Zhou asking Manhattan or Brooklyn" loading="lazy" width="1080" height="1920"><span class="play"><i>&#9654;</i></span></div>
+        <div class="body">
+          <div class="chiprow"><span class="chip tilt-b">Instagram</span><span class="chip client tilt-a">Judy Zhou</span></div>
+          <h3>Manhattan or Brooklyn?</h3>
+          <p>A newlywed compromise, filmed across Manhattan, Brooklyn, and Astoria. Credited on the post as video magician.</p>
+          <p class="num">190 likes <small>&middot; 35 comments &middot; May 2024</small></p>
+          <a class="watch" href="https://www.instagram.com/reel/C6cuZ5euWhK/" target="_blank" rel="noopener">Watch on Instagram &rarr;</a>
+        </div>
+      </article>
+      <article class="card reveal">
+        <div class="thumb" data-video="instagram" data-id="DBZeOmLPXQb"><img src="images/thumbs/ig-DBZeOmLPXQb.jpg" alt="Judy Zhou announcing her newsletter" loading="lazy" width="1080" height="1920"><span class="play"><i>&#9654;</i></span></div>
+        <div class="body">
+          <div class="chiprow"><span class="chip tilt-a">Instagram</span><span class="chip client tilt-b">Judy Zhou</span></div>
+          <h3>The big announcement</h3>
+          <p>Judy's newsletter announcement reel. Credited on the post for the video magic.</p>
+          <p class="num">137 likes <small>&middot; 58 comments &middot; Oct 2024</small></p>
+          <a class="watch" href="https://www.instagram.com/reel/DBZeOmLPXQb/" target="_blank" rel="noopener">Watch on Instagram &rarr;</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="clients">
+  <div class="wrap">
+    <div class="reveal">
+      <p class="eyebrow"><span class="spark">&#10022;</span> Pages I manage</p>
+      <h2>Client work, not just her own feed.</h2>
+      <p class="lede">She shoots and edits for clients, and runs their pages day to day.</p>
+    </div>
+    <div class="client-grid" style="margin-top:32px">
+      <article class="client-card reveal">
+        <p class="eyebrow">Managed page</p>
+        <h3>Judy Zhou, Douglas Elliman</h3>
+        <p>First time home buyers finding their dream NYC home. Jacxenie manages the page and makes the reels, three of them on this page, two credited to her by name on the posts.</p>
+        <p class="num">3,629 followers <small>&middot; as of Nov 6, 2026</small></p>
+        <p style="margin-top:16px"><a class="watch" href="https://www.instagram.com/judyyizhou/" target="_blank" rel="noopener">@judyyizhou on Instagram &rarr;</a></p>
+      </article>
+      <article class="client-card reveal">
+        <p class="eyebrow">Agency body of work</p>
+        <h3>Anomalous portfolio</h3>
+        <p>Four years of client work at Anomalous, the agency she helps operate: filming, editing, delivery, posting, copy, and customer strategy across real estate clients in New York.</p>
+        <p class="num">16 client entries <small>&middot; video led</small></p>
+        <p style="margin-top:16px"><a class="watch" href="https://www.goanomalous.com/portfolio" target="_blank" rel="noopener">goanomalous.com/portfolio &rarr;</a></p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="contact" style="padding-top:0">
+  <div class="wrap">
+    <div class="contact-card reveal">
+      <p class="eyebrow" style="color:#f0a8c0"><span class="spark" style="color:#f0a8c0">&#10022;</span> Contact me</p>
+      <h2>Let's work together.</h2>
+      <p>Have a project, a page that needs managing, or just want to say hi? My inbox is open.</p>
+      <a class="mail" href="mailto:jacxeniee@gmail.com">jacxeniee@gmail.com</a>
+      <div class="socials">
+        <a href="https://www.instagram.com/jacxenie/" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://www.tiktok.com/@jacxenie" target="_blank" rel="noopener">TikTok</a>
+        <a href="https://www.linkedin.com/in/jacxenie-espinal-020955244/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://www.youtube.com/@jacxenie" target="_blank" rel="noopener">YouTube</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p class="foot-fine">&copy; 2026 Jacxenie. Proof of work, with links to the originals.</p>
+  </div>
+</footer>
+
+<div class="vmodal" id="videoModal" hidden role="dialog" aria-label="Video player">
+  <div class="vbox" id="vbox">
+    <div class="vframe"><iframe id="vframe" src="" title="Video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+    <button class="vclose" id="vclose">&times; Close</button>
+  </div>
+</div>
+
+<script>
+(function(){
+  "use strict";
+  /* Mobile menu */
+  var toggle=document.getElementById("navToggle"), nav=document.getElementById("nav");
+  toggle.addEventListener("click",function(){
+    var open=nav.classList.toggle("open");
+    toggle.setAttribute("aria-expanded",open?"true":"false");
+    toggle.innerHTML=open?"&times;":"&#9776;";
+  });
+  nav.addEventListener("click",function(e){
+    if(e.target.tagName==="A"){nav.classList.remove("open");toggle.setAttribute("aria-expanded","false");toggle.innerHTML="&#9776;";}
+  });
+  /* Scroll reveal */
+  var revealEls=document.querySelectorAll(".reveal");
+  if("IntersectionObserver" in window){
+    var io=new IntersectionObserver(function(entries){
+      entries.forEach(function(en){if(en.isIntersecting){en.target.classList.add("in");io.unobserve(en.target);}});
+    },{threshold:.12});
+    revealEls.forEach(function(el){io.observe(el);});
+  }else{revealEls.forEach(function(el){el.classList.add("in");});}
+  /* Stat count-up */
+  function countUp(el){
+    var target=parseFloat(el.getAttribute("data-count")), dec=parseInt(el.getAttribute("data-decimals")||"0",10);
+    var start=null, dur=1200;
+    function tick(ts){
+      if(!start)start=ts;
+      var p=Math.min((ts-start)/dur,1), eased=1-Math.pow(1-p,3);
+      el.textContent=(target*eased).toFixed(dec);
+      if(p<1)requestAnimationFrame(tick);
+    }
+    requestAnimationFrame(tick);
+  }
+  var stats=document.querySelector(".stats");
+  if(stats){
+    if("IntersectionObserver" in window){
+      var so=new IntersectionObserver(function(entries){
+        entries.forEach(function(en){
+          if(en.isIntersecting){
+            document.querySelectorAll("[data-count]").forEach(countUp);
+            so.disconnect();
+          }
+        });
+      },{threshold:.4});
+      so.observe(stats);
+    }else{document.querySelectorAll("[data-count]").forEach(countUp);}
+  }
+  /* Scrollspy */
+  var links=Array.prototype.slice.call(document.querySelectorAll(".nav a"));
+  var sections=links.map(function(a){return document.querySelector(a.getAttribute("href"));});
+  function spy(){
+    var y=window.scrollY+120, current=null;
+    sections.forEach(function(s,i){if(s&&s.offsetTop<=y)current=i;});
+    links.forEach(function(a,i){a.classList.toggle("active",i===current);});
+  }
+  window.addEventListener("scroll",spy,{passive:true}); spy();
+  /* Video modal: play right on the page */
+  var modal=document.getElementById("videoModal"), vbox=document.getElementById("vbox"),
+      frame=document.getElementById("vframe");
+  function openVideo(kind,id){
+    var src="", portrait=false;
+    if(kind==="youtube"){src="https://www.youtube.com/embed/"+id+"?autoplay=1&rel=0";}
+    else if(kind==="tiktok"){src="https://www.tiktok.com/player/v1/"+id+"?autoplay=1&muted=1";portrait=true;}
+    else if(kind==="instagram"){src="https://www.instagram.com/p/"+id+"/embed/";portrait=true;}
+    if(!src)return;
+    vbox.classList.toggle("portrait",portrait);
+    frame.src=src;
+    modal.hidden=false; document.body.style.overflow="hidden";
+  }
+  function closeVideo(){frame.src="";modal.hidden=true;document.body.style.overflow="";}
+  document.querySelectorAll(".thumb[data-video]").forEach(function(th){
+    th.addEventListener("click",function(){openVideo(th.getAttribute("data-video"),th.getAttribute("data-id"));});
+  });
+  document.getElementById("vclose").addEventListener("click",closeVideo);
+  modal.addEventListener("click",function(e){if(e.target===modal)closeVideo();});
+  document.addEventListener("keydown",function(e){if(e.key==="Escape"&&!modal.hidden)closeVideo();});
+})();
+</script>
+</body>
+</html>
